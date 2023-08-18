@@ -897,6 +897,9 @@ a[href^="tel:"] small small {
     background-color: #1d2326;
     transition: all .5s ease;
 }
+.flex_text span {
+    cursor: pointer;
+}
 
 .open_text {
     line-height: 1.2;

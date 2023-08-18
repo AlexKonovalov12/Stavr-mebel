@@ -2558,6 +2558,10 @@
         padding-right: 20px;
     }
 
+    .block-contacts-main {
+        flex-direction: column;
+    }
+
     .block-contacts-main .text-main-content {
         width: 100%;
         margin-bottom: 40px;
