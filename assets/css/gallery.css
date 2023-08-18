@@ -1,6 +1,5 @@
 body {
-    background: -webkit-linear-gradient(50deg, #84a98c, #52796f, #354f52);
-    background: linear-gradient(50deg, #84a98c, #52796f, #354f52);
+    background-color: #343d46;
 }
 
 .hello {
@@ -35,8 +34,8 @@ body {
 
 .gallery-filter .filter-item.active {
     color: white;
-    border-color: #0f1718;
-    background: #283d3f;
+    border-color: #818181;
+    background: #1a1919;
 }
 
 .gallery .gallery-item.hide {

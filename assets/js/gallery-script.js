@@ -1,3 +1,4 @@
+
 let canUpdateTextAdvantageLine = false;
 
 // показывать онимацию появления блоков несколько раз 
@@ -6,7 +7,7 @@ let on_section_back_animate = false;
 // анализировать блоки основыной страницы во время скрола
 let can_parse_main_block = true;
 
-// открыто ли модальное окно 
+
 let super_modal_is_open = false; // respath
 
 let timerIdPromoptSuperMOdal = null;
@@ -205,10 +206,12 @@ document.addEventListener('DOMContentLoaded', (e) => {
     });
 
 
+
     const filterContainer = document.querySelector(".gallery-filter");
     const galleryItems = document.querySelectorAll(".gallery-item");
 
     filterContainer.addEventListener("click", (event) => {
+       
         if (event.target.classList.contains("filter-item")) {
 
             // deactivate existing active 'filter-item'
@@ -216,14 +219,16 @@ document.addEventListener('DOMContentLoaded', (e) => {
 
             // activate new 'filter-item'
             event.target.classList.add("active");
-
+            
             const filterValue = event.target.getAttribute("data-filter");
-
+            var altura = getVal(gallery, 'grid-auto-rows');
+            var gap = getVal(gallery, 'grid-row-gap');
             galleryItems.forEach((item) => {
-
                 if (item.classList.contains(filterValue) || filterValue === 'all') {
                     item.classList.remove("hide");
                     item.classList.add("show");
+                    var el = item;
+                    el.style.gridRowEnd = "span " + Math.ceil((getHeight(item) + gap) / (altura + gap));
                 }
 
                 else {

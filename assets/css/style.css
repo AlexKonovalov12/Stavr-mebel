@@ -108,7 +108,7 @@ a[href^="tel:"] small small {
 .sticky-main-menu {
     transition: 0.6s;
     -moz-transition: 0.6s;
-    background-color: #2F3E46;
+    background-color: #1d2326;
 
     margin-top: 0px;
     height: 60px;
@@ -761,8 +761,9 @@ a[href^="tel:"] small small {
 /* ------ Block 2 -----------------------------*/
 
 #block-about {
-    background: -webkit-linear-gradient(230deg, #343d46, #4f5b66, #65737e);
-    background: linear-gradient(230deg, #343d46, #4f5b66, #65737e);
+    /* background: -webkit-linear-gradient(230deg, #343d46, #4f5b66, #65737e);
+    background: linear-gradient(230deg, #343d46, #4f5b66, #65737e); */
+    background-color: #343d46;
     padding-top: 100px;
     padding-bottom: 140px;
     padding-left: 180px;
@@ -781,7 +782,7 @@ a[href^="tel:"] small small {
 
 .head_line {
     height: 5px;
-    background-color: #343d46;
+    background-color: #7e93a9;
     width: 200px;
     margin: 20px auto 0;
 }
@@ -847,8 +848,9 @@ a[href^="tel:"] small small {
 }
 
 #block-what_we-do {
-    background: -webkit-linear-gradient(230deg, #343d46, #4f5b66, #65737e);
-    background: linear-gradient(230deg, #343d46, #4f5b66, #65737e);
+    /* background: -webkit-linear-gradient(230deg, #343d46, #4f5b66, #65737e);
+    background: linear-gradient(230deg, #343d46, #4f5b66, #65737e); */
+    background-color: #343d46;
     padding-top: 100px;
     padding-bottom: 140px;
     padding-left: 180px;
@@ -864,6 +866,8 @@ a[href^="tel:"] small small {
 }
 
 .box {
+    display: flex;
+    flex-direction: column-reverse;
     flex: 1;
     overflow: hidden;
     transition: .5s;
@@ -873,38 +877,60 @@ a[href^="tel:"] small small {
     border-radius: 10px;
 }
 
-.box>img {
+.flex_images {
     width: 200%;
     height: calc(100% - 7vh);
     object-fit: cover;
-    transition: .5s;
+    transition: all .5s ease;
 }
 
-.box>span {
+.flex_text {
     font-size: 20px;
-    display: block;
+    display: flex;
+    flex-direction: column;
     text-align: center;
     height: 8vh;
     line-height: 3;
     color: white;
     font-weight: 500;
     letter-spacing: 2px;
-    background-color: #343d46;
+    background-color: #1d2326;
+    transition: all .5s ease;
+}
+
+.open_text {
+    line-height: 1.2;
+    font-size: 17px;
+    display: none;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
 .box:hover {
     flex: 1 1 50%;
 }
 
-.box:hover>img {
+.box:hover>.flex_images {
     width: 100%;
 }
 
+.flex_text:hover {
+    height: 20vh;
+}
+
+.flex_text:hover .open_text {
+    display: block;
+}
+
+.flex_text:hover ~ .flex_images {
+    height: calc(100% - 20vh);
+}
 /* ------ Block 3 -----------------------------*/
 
 #block-our-works {
-    background: -webkit-linear-gradient(230deg, #343d46, #4f5b66, #65737e);
-    background: linear-gradient(230deg, #343d46, #4f5b66, #65737e);
+    /* background: -webkit-linear-gradient(230deg, #343d46, #4f5b66, #65737e);
+    background: linear-gradient(230deg, #343d46, #4f5b66, #65737e); */
+    background-color: #343d46;
     padding-top: 100px;
     padding-bottom: 140px;
     padding-left: 180px;
@@ -950,7 +976,7 @@ a[href^="tel:"] small small {
     width: 100px;
     height: 3px;
     margin-left: 10px;
-    background-color: rgb(33, 49, 51);
+    background-color: #7e93a9;
 
 }
 
@@ -1061,7 +1087,7 @@ a[href^="tel:"] small small {
     bottom: -1px;
     left: -8px;
     width: 0;
-    background: linear-gradient(75deg, #dde6df, #467e70);
+    background: linear-gradient(75deg, #dde6df, #839590);
     transform: skew(-15deg);
     transition: all .2s ease;
 }
@@ -1091,8 +1117,9 @@ a[href^="tel:"] small small {
 /* ----- Block 6  ------------- */
 
 #block-get-consult-by-spec {
-    background: -webkit-linear-gradient(230deg, #343d46, #4f5b66, #65737e);
-    background: linear-gradient(230deg, #343d46, #4f5b66, #65737e);
+    /* background: -webkit-linear-gradient(230deg, #343d46, #4f5b66, #65737e);
+    background: linear-gradient(230deg, #343d46, #4f5b66, #65737e); */
+    background-color: #343d46;
     padding-top: 100px;
     padding-bottom: 140px;
     padding-left: 180px;
@@ -1165,23 +1192,23 @@ a[href^="tel:"] small small {
 #block-get-consult-by-spec form .form-input-block input {
     height: 58px;
     width: 312px;
-    background: #2F3E46;
+    background: #131414;
     padding: 20px 28px 20px 28px;
     font-weight: 500;
     font-size: 18px;
     line-height: 100%;
-    color: #2E2E2E;
+    color: #fffefe;
     margin-right: 32px;
 }
 
 #block-get-consult-by-spec form .form-input-block input::placeholder {
-    color: #9A9A9A;
+    color: #bdbdbd;
     font-weight: 400;
 }
 
 #block-get-consult-by-spec form .form-input-block input:focus {
     background-color: #ffffff;
-    border: 1px solid #FD103D;
+    border: 1px solid #292929;
     padding: 19px 27px 19px 27px;
 }
 
@@ -1332,9 +1359,9 @@ a[href^="tel:"] small small {
 
 /*--- Block 7 -----------*/
 #block-contacts {
-    background: -webkit-linear-gradient(230deg, #343d46, #4f5b66, #65737e);
-    background: linear-gradient(230deg, #343d46, #4f5b66, #65737e);
-
+    /* background: -webkit-linear-gradient(230deg, #343d46, #4f5b66, #65737e);
+    background: linear-gradient(230deg, #343d46, #4f5b66, #65737e); */
+background-color: #343d46;
     padding-top: 100px;
     padding-bottom: 20px;
     padding-left: 180px;
@@ -1704,7 +1731,7 @@ iframe {
     font-size: 12px;
     line-height: 15px;
     /* identical to box height */
-    color: #213133;
+    color: #eeeeee;
 }
 
 
@@ -1765,9 +1792,7 @@ iframe {
 
 
 .sect-doc-content {
-    background: -webkit-linear-gradient(125deg, #84a98c, #52796f);
-    /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(125deg, #84a98c, #52796f);
+    background-color: #343d46;
     padding-left: 280px;
     padding-right: 380px;
     padding-top: 160px;
@@ -1921,7 +1946,7 @@ iframe {
 
 .modal-window-main {
     width: 800px;
-    height: 660px;
+    height: 560px;
     box-sizing: border-box;
     background-color: #2F3E46;
     background-size: cover;
@@ -3589,7 +3614,7 @@ body {
     font-weight: 400;
     font-size: 18px;
     line-height: 23px;
-    /* identical to box height */
+    border-radius: 10px;
     border: 1px solid #ffffff1a;
     width: 60%;
     color: #FFFFFF;
@@ -3609,7 +3634,7 @@ body {
 }
 
 .modal-window-main .inputs-block input[type='text']:hover {
-    background-color: #84A98C;
+    background-color: #2f3230;
     cursor: pointer;
     border: none;
 }
@@ -4855,4 +4880,103 @@ img[loading="lazy"] {
 
 .swiper-pagination {
     display: none;
+}
+
+.question {
+    width: 50%;
+    padding: 0 20px;
+}
+
+.question h2 {
+    color: white;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.accordion a {
+    position: relative;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    width: 100%;
+    padding: 1rem 3rem 1rem 1rem;
+    color: #ffffff;
+    font-size: 1.15rem;
+    font-weight: 400;
+    letter-spacing: 1px;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.accordion a:hover,
+.accordion a:hover::after {
+    cursor: pointer;
+    color: #020202;
+}
+
+.accordion a:hover::after {
+    border: 1px solid #000000;
+}
+
+.accordion a.active {
+    color: #ffffff;
+    border-bottom: 1px solid #000000;
+}
+
+.accordion a::after {
+    font-family: 'Ionicons';
+    content: '\f218';
+    position: absolute;
+    float: right;
+    right: 1rem;
+    bottom: 8px;
+    font-size: 17px;
+    color: #ffffff;
+    padding: 5px;
+    width: 20px;
+    height: 20px;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    border: 1px solid #ffffff;
+    text-align: center;
+}
+
+.accordion a.active::after {
+    font-family: 'Ionicons';
+    content: '\f209';
+    color: #000000;
+    border: 1px solid #000000;
+}
+
+.accordion .content {
+    opacity: 0;
+    padding: 0 1rem;
+    max-height: 0;
+    border-bottom: 1px solid #e5e5e5;
+    overflow: hidden;
+    clear: both;
+    -webkit-transition: all 0.2s ease 0.15s;
+    -o-transition: all 0.2s ease 0.15s;
+    transition: all 0.2s ease 0.15s;
+}
+
+.accordion .content p {
+    font-size: 1rem;
+    font-weight: 300;
+    color: white;
+}
+
+.accordion .content.active {
+    opacity: 1;
+    padding: 1rem;
+    max-height: 100%;
+    -webkit-transition: all 0.35s ease 0.15s;
+    -o-transition: all 0.35s ease 0.15s;
+    transition: all 0.35s ease 0.15s;
 }
