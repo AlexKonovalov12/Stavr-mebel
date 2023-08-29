@@ -14,7 +14,7 @@ $(document).ready(function () {
             $('.benefits__number').css('opacity', '1');
             $('.benefits__number').spincrement({
                 thousandSeparator: "",
-                duration: 1200
+                duration: 1800
             });
 
             show = false;

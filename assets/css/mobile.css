@@ -2413,9 +2413,13 @@
     #block-what_we-do {
         padding-top: 60px;
         padding-bottom: 100px;
-        padding-left: 20px;
+        padding-left: 5px;
         padding-right: 20px;
     }
+
+        #block-what_we-do>.about_head_text {
+            padding-left: 15px;
+        }
 
     .about_work_container {
         display: flex;
@@ -2437,7 +2441,7 @@
     }
 
     .box:hover {
-        flex: 1 0 100%;
+        flex: 1 0 95%;
     }
 
     .flex_text {

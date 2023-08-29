@@ -838,9 +838,21 @@ a[href^="tel:"] small small {
 }
 
 .benefits__number {
+    
     font-size: 2.5rem;
     font-weight: 700;
     margin-bottom: 20px
+}
+
+.number_of_projects {
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+}
+
+.number_of_projects span {
+    font-size: 40px;
+    color: white;
 }
 
 .benefits__title {
